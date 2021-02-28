@@ -11,6 +11,11 @@
 		FAA1200E25EBA86600E05639 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1200D25EBA86600E05639 /* ContentView.swift */; };
 		FAA1201025EBA86A00E05639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA1200F25EBA86A00E05639 /* Assets.xcassets */; };
 		FAA1201325EBA86A00E05639 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA1201225EBA86A00E05639 /* Preview Assets.xcassets */; };
+		FAA1201D25EBCF6200E05639 /* DashboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1201C25EBCF6200E05639 /* DashboardScreen.swift */; };
+		FAA1202125EBCFCC00E05639 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202025EBCFCC00E05639 /* AboutScreen.swift */; };
+		FAA1202625EBD48900E05639 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202525EBD48900E05639 /* FoodScreen.swift */; };
+		FAA1202A25EBD60C00E05639 /* FoodScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */; };
+		FAA1203125EBD8A000E05639 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1203025EBD8A000E05639 /* FoodModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		FAA1200F25EBA86A00E05639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA1201225EBA86A00E05639 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAA1201425EBA86A00E05639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA1201C25EBCF6200E05639 /* DashboardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreen.swift; sourceTree = "<group>"; };
+		FAA1202025EBCFCC00E05639 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		FAA1202525EBD48900E05639 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
+		FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreenViewModel.swift; sourceTree = "<group>"; };
+		FAA1203025EBD8A000E05639 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,9 @@
 		FAA1200A25EBA86600E05639 /* HW1SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FAA1202F25EBD89100E05639 /* Model */,
+				FAA1202825EBD5ED00E05639 /* ViewModels */,
+				FAA1201B25EBCF4800E05639 /* Screens */,
 				FAA1200B25EBA86600E05639 /* HW1SwiftUIApp.swift */,
 				FAA1200D25EBA86600E05639 /* ContentView.swift */,
 				FAA1200F25EBA86A00E05639 /* Assets.xcassets */,
@@ -67,6 +80,32 @@
 				FAA1201225EBA86A00E05639 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAA1201B25EBCF4800E05639 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1201C25EBCF6200E05639 /* DashboardScreen.swift */,
+				FAA1202525EBD48900E05639 /* FoodScreen.swift */,
+				FAA1202025EBCFCC00E05639 /* AboutScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FAA1202825EBD5ED00E05639 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAA1202F25EBD89100E05639 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1203025EBD8A000E05639 /* FoodModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA1203125EBD8A000E05639 /* FoodModel.swift in Sources */,
+				FAA1202125EBCFCC00E05639 /* AboutScreen.swift in Sources */,
+				FAA1202625EBD48900E05639 /* FoodScreen.swift in Sources */,
+				FAA1202A25EBD60C00E05639 /* FoodScreenViewModel.swift in Sources */,
 				FAA1200E25EBA86600E05639 /* ContentView.swift in Sources */,
+				FAA1201D25EBCF6200E05639 /* DashboardScreen.swift in Sources */,
 				FAA1200C25EBA86600E05639 /* HW1SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

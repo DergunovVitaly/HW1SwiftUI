@@ -13,18 +13,30 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            DashboardView()
+            DashboardScreen()
                 .tabItem {
+                    VStack {
+                    Image(systemName: "star")
                     Text("Main")
+                    }
                 }
-            DashboardView()
+                .tag(0)
+            FoodScreen()
                 .tabItem {
-                    Text("Main")
+                    VStack {
+                    Image(systemName: "pills")
+                    Text("Food")
+                    }
                 }
-            DashboardView()
+                .tag(1)
+            AboutScreen()
                 .tabItem {
-                    Text("Main")
+                    VStack {
+                    Image(systemName: "star")
+                    Text("About")
+                    }
                 }
+                .tag(2)
         }
     }
 }
@@ -32,13 +44,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-// MARK: - Views
-
-struct DashboardView: View {
-    var body: some View {
-        Text("Start Page")
     }
 }
