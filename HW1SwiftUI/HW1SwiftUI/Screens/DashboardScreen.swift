@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct DashboardScreen: View {
+    
     var body: some View {
+        VStack(alignment: .center, spacing: 20) {
         Text("Start Page")
+        Button("Button") {
+            }
+        }
     }
 }
 
