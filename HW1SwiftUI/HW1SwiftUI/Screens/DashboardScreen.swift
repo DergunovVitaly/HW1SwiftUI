@@ -10,10 +10,20 @@ import SwiftUI
 struct DashboardScreen: View {
     
     var body: some View {
-        VStack(alignment: .center, spacing: 20) {
-        Text("Start Page")
-        Button("Button") {
-            }
+        NavigationView {
+            NavigationLink(destination: SeparateView()) {
+                Text("I like pizza")
+            }.navigationBarTitle(Text("Dashboard"))
+        }
+    }
+}
+
+struct SeparateView: View {
+    var body: some View {
+        VStack {
+            FoodScreen()
+//                .navigationBarHidden(true)
+            FoodView(emoji: "🍕🍕🍕")
         }
     }
 }
