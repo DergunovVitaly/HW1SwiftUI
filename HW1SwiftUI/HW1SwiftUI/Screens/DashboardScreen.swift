@@ -21,8 +21,7 @@ struct DashboardScreen: View {
 struct SeparateView: View {
     var body: some View {
         VStack {
-            FoodScreen()
-//                .navigationBarHidden(true)
+            FoodScreen(isRoot: false)
             FoodView(emoji: "🍕🍕🍕")
         }
     }
