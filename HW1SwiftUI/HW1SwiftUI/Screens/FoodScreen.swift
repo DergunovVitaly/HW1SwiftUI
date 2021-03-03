@@ -8,35 +8,29 @@
 import SwiftUI
 
 struct FoodScreen: View {
-    
-    
-    @State var isRoot: Bool = true
-    var body: some View {
-        if isRoot {
-            NavigationView {
-                ListView()
-            }
-        } else {
-            ListView()
-        }
-    }
-}
-
-struct ListView: View {
-    
-    @ObservedObject var viewModel: FoodScreenViewModel = .init()
+   
+    @EnvironmentObject var viewModel: FoodScreenViewModel
+    @EnvironmentObject var router: Router
     @State var favoritesShowed: Bool = false
     
     var body: some View {
-        List {
-            FilterView(favoritesShowed: $favoritesShowed)
-            ForEach(viewModel.foods) { item in
-                if !favoritesShowed || item.isFavorite {
-                    FoodListCell(food: item)
-                }
+            NavigationView {
+                List {
+                    FilterView(favoritesShowed: $favoritesShowed)
+                    ForEach(viewModel.foods) { item in
+                        if !favoritesShowed || item.isFavorite {
+                            FoodListCell(food: item)
+                        }
+                    }
+                }// List
+                .navigationTitle("Foods")
+                .overlay(NavigationLink(
+                            destination: FoodView(emoji: "🍕"),
+                            isActive: $router.isOpenedFastFoodScreen,
+                            label: {
+                                EmptyView().hidden()
+                            }))
             }
-        }// List
-        .navigationTitle("Foods")
     }
 }
 

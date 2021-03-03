@@ -9,20 +9,21 @@ import SwiftUI
 
 struct DashboardScreen: View {
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
-        NavigationView {
-            NavigationLink(destination: SeparateView()) {
-                Text("I like pizza")
-            }.navigationBarTitle(Text("Dashboard"))
-        }
-    }
-}
-
-struct SeparateView: View {
-    var body: some View {
-        VStack {
-            FoodScreen(isRoot: false)
-            FoodView(emoji: "🍕🍕🍕")
+        VStack(alignment: .center, spacing: 20) {
+        Text("Start Page")
+            Button(action: {
+                router.selection = 1
+                router.isOpenedFastFoodScreen = true
+            }, label: {
+                Text("Show Fast Food")
+            })
+            .padding()
+            .foregroundColor(.orange)
+            .background(Color.gray)
+            .cornerRadius(9)
         }
     }
 }

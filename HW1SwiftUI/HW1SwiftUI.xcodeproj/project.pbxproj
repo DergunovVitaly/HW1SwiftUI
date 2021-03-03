@@ -16,6 +16,7 @@
 		FAA1202625EBD48900E05639 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202525EBD48900E05639 /* FoodScreen.swift */; };
 		FAA1202A25EBD60C00E05639 /* FoodScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */; };
 		FAA1203125EBD8A000E05639 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1203025EBD8A000E05639 /* FoodModel.swift */; };
+		FAF87A9525EF69D4001E4C29 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF87A9425EF69D4001E4C29 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FAA1202525EBD48900E05639 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
 		FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreenViewModel.swift; sourceTree = "<group>"; };
 		FAA1203025EBD8A000E05639 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		FAF87A9425EF69D4001E4C29 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		FAA1200A25EBA86600E05639 /* HW1SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FAF87A9325EF69B3001E4C29 /* Services */,
 				FAA1202F25EBD89100E05639 /* Model */,
 				FAA1202825EBD5ED00E05639 /* ViewModels */,
 				FAA1201B25EBCF4800E05639 /* Screens */,
@@ -106,6 +109,14 @@
 				FAA1203025EBD8A000E05639 /* FoodModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FAF87A9325EF69B3001E4C29 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAF87A9425EF69D4001E4C29 /* Router.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF87A9525EF69D4001E4C29 /* Router.swift in Sources */,
 				FAA1203125EBD8A000E05639 /* FoodModel.swift in Sources */,
 				FAA1202125EBCFCC00E05639 /* AboutScreen.swift in Sources */,
 				FAA1202625EBD48900E05639 /* FoodScreen.swift in Sources */,
