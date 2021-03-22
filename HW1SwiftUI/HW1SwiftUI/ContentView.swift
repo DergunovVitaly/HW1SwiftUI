@@ -29,6 +29,14 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
+            CatalogScreen()
+                .tabItem {
+                    VStack {
+                    Image(systemName: "books.vertical")
+                    Text("Catalog")
+                    }
+                }
+                .tag(2)
             AboutScreen()
                 .tabItem {
                     VStack {
@@ -36,7 +44,7 @@ struct ContentView: View {
                     Text("About")
                     }
                 }
-                .tag(2)
+                .tag(3)
         }
     }
 }

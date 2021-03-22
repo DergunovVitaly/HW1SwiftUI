@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAA0B59B2607A0430041DF61 /* CatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0B59A2607A0430041DF61 /* CatalogScreen.swift */; };
+		FAA0B5A12607A9C80041DF61 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = FAA0B5A02607A9C80041DF61 /* UIComponents */; };
+		FAA0B5A42607CC480041DF61 /* TwoColumnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0B5A32607CC470041DF61 /* TwoColumnScreen.swift */; };
 		FAA1200C25EBA86600E05639 /* HW1SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1200B25EBA86600E05639 /* HW1SwiftUIApp.swift */; };
 		FAA1200E25EBA86600E05639 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1200D25EBA86600E05639 /* ContentView.swift */; };
 		FAA1201025EBA86A00E05639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA1200F25EBA86A00E05639 /* Assets.xcassets */; };
@@ -16,10 +19,15 @@
 		FAA1202625EBD48900E05639 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202525EBD48900E05639 /* FoodScreen.swift */; };
 		FAA1202A25EBD60C00E05639 /* FoodScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */; };
 		FAA1203125EBD8A000E05639 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1203025EBD8A000E05639 /* FoodModel.swift */; };
+		FAEBEF6D26026E2C00AC6186 /* AppNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = FAEBEF6C26026E2C00AC6186 /* AppNetworking */; };
+		FAEBEF77260272EA00AC6186 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAEBEF76260272EA00AC6186 /* Alamofire */; };
 		FAF87A9525EF69D4001E4C29 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF87A9425EF69D4001E4C29 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FAA0B59A2607A0430041DF61 /* CatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreen.swift; sourceTree = "<group>"; };
+		FAA0B59E2607A2500041DF61 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIComponents; sourceTree = "<group>"; };
+		FAA0B5A32607CC470041DF61 /* TwoColumnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoColumnScreen.swift; sourceTree = "<group>"; };
 		FAA1200825EBA86600E05639 /* HW1SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW1SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA1200B25EBA86600E05639 /* HW1SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW1SwiftUIApp.swift; sourceTree = "<group>"; };
 		FAA1200D25EBA86600E05639 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +39,7 @@
 		FAA1202525EBD48900E05639 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
 		FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreenViewModel.swift; sourceTree = "<group>"; };
 		FAA1203025EBD8A000E05639 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		FAEBEF6926026C9000AC6186 /* AppNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppNetworking; sourceTree = "<group>"; };
 		FAF87A9425EF69D4001E4C29 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,17 +48,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA0B5A12607A9C80041DF61 /* UIComponents in Frameworks */,
+				FAEBEF6D26026E2C00AC6186 /* AppNetworking in Frameworks */,
+				FAEBEF77260272EA00AC6186 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAA0B59426079EAA0041DF61 /* 1_Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1201C25EBCF6200E05639 /* DashboardScreen.swift */,
+			);
+			path = 1_Dashboard;
+			sourceTree = "<group>";
+		};
+		FAA0B59526079EBD0041DF61 /* 2_Food */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1203025EBD8A000E05639 /* FoodModel.swift */,
+				FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */,
+				FAA1202525EBD48900E05639 /* FoodScreen.swift */,
+			);
+			path = 2_Food;
+			sourceTree = "<group>";
+		};
+		FAA0B59626079ED50041DF61 /* 4_About */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1202025EBCFCC00E05639 /* AboutScreen.swift */,
+			);
+			path = 4_About;
+			sourceTree = "<group>";
+		};
+		FAA0B5992607A0200041DF61 /* 3_Catalopg */ = {
+			isa = PBXGroup;
+			children = (
+				FAA0B59A2607A0430041DF61 /* CatalogScreen.swift */,
+				FAA0B5A32607CC470041DF61 /* TwoColumnScreen.swift */,
+			);
+			path = 3_Catalopg;
+			sourceTree = "<group>";
+		};
+		FAA0B59D2607A0C30041DF61 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FAA0B59E2607A2500041DF61 /* UIComponents */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		FAA11FFF25EBA86600E05639 = {
 			isa = PBXGroup;
 			children = (
+				FAA0B59D2607A0C30041DF61 /* Modules */,
+				FAEBEF6926026C9000AC6186 /* AppNetworking */,
 				FAA1200A25EBA86600E05639 /* HW1SwiftUI */,
 				FAA1200925EBA86600E05639 /* Products */,
+				FAEBEF6B26026E2C00AC6186 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,10 +122,11 @@
 		FAA1200A25EBA86600E05639 /* HW1SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FAA0B59426079EAA0041DF61 /* 1_Dashboard */,
+				FAA0B59526079EBD0041DF61 /* 2_Food */,
+				FAA0B5992607A0200041DF61 /* 3_Catalopg */,
+				FAA0B59626079ED50041DF61 /* 4_About */,
 				FAF87A9325EF69B3001E4C29 /* Services */,
-				FAA1202F25EBD89100E05639 /* Model */,
-				FAA1202825EBD5ED00E05639 /* ViewModels */,
-				FAA1201B25EBCF4800E05639 /* Screens */,
 				FAA1200B25EBA86600E05639 /* HW1SwiftUIApp.swift */,
 				FAA1200D25EBA86600E05639 /* ContentView.swift */,
 				FAA1200F25EBA86A00E05639 /* Assets.xcassets */,
@@ -85,30 +144,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FAA1201B25EBCF4800E05639 /* Screens */ = {
+		FAEBEF6B26026E2C00AC6186 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAA1201C25EBCF6200E05639 /* DashboardScreen.swift */,
-				FAA1202525EBD48900E05639 /* FoodScreen.swift */,
-				FAA1202025EBCFCC00E05639 /* AboutScreen.swift */,
 			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		FAA1202825EBD5ED00E05639 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		FAA1202F25EBD89100E05639 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FAA1203025EBD8A000E05639 /* FoodModel.swift */,
-			);
-			path = Model;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FAF87A9325EF69B3001E4C29 /* Services */ = {
@@ -135,6 +175,11 @@
 			dependencies = (
 			);
 			name = HW1SwiftUI;
+			packageProductDependencies = (
+				FAEBEF6C26026E2C00AC6186 /* AppNetworking */,
+				FAEBEF76260272EA00AC6186 /* Alamofire */,
+				FAA0B5A02607A9C80041DF61 /* UIComponents */,
+			);
 			productName = HW1SwiftUI;
 			productReference = FAA1200825EBA86600E05639 /* HW1SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +207,9 @@
 				Base,
 			);
 			mainGroup = FAA11FFF25EBA86600E05639;
+			packageReferences = (
+				FAEBEF75260272EA00AC6186 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FAA1200925EBA86600E05639 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -196,6 +244,8 @@
 				FAA1200E25EBA86600E05639 /* ContentView.swift in Sources */,
 				FAA1201D25EBCF6200E05639 /* DashboardScreen.swift in Sources */,
 				FAA1200C25EBA86600E05639 /* HW1SwiftUIApp.swift in Sources */,
+				FAA0B5A42607CC480041DF61 /* TwoColumnScreen.swift in Sources */,
+				FAA0B59B2607A0430041DF61 /* CatalogScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +434,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAEBEF75260272EA00AC6186 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAA0B5A02607A9C80041DF61 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+		FAEBEF6C26026E2C00AC6186 /* AppNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppNetworking;
+		};
+		FAEBEF76260272EA00AC6186 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAEBEF75260272EA00AC6186 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAA1200025EBA86600E05639 /* Project object */;
 }
