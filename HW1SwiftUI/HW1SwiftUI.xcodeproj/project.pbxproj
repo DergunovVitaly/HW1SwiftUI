@@ -19,6 +19,8 @@
 		FAA1202625EBD48900E05639 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202525EBD48900E05639 /* FoodScreen.swift */; };
 		FAA1202A25EBD60C00E05639 /* FoodScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */; };
 		FAA1203125EBD8A000E05639 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1203025EBD8A000E05639 /* FoodModel.swift */; };
+		FAA3FF1C26087874007D82FF /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3FF1B26087874007D82FF /* AnyTransition.swift */; };
+		FAA3FF1F26087AD9007D82FF /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3FF1E26087AD9007D82FF /* ActivityIndicatorView.swift */; };
 		FAEBEF6D26026E2C00AC6186 /* AppNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = FAEBEF6C26026E2C00AC6186 /* AppNetworking */; };
 		FAEBEF77260272EA00AC6186 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAEBEF76260272EA00AC6186 /* Alamofire */; };
 		FAF87A9525EF69D4001E4C29 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF87A9425EF69D4001E4C29 /* Router.swift */; };
@@ -39,6 +41,8 @@
 		FAA1202525EBD48900E05639 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
 		FAA1202925EBD60C00E05639 /* FoodScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreenViewModel.swift; sourceTree = "<group>"; };
 		FAA1203025EBD8A000E05639 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		FAA3FF1B26087874007D82FF /* AnyTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		FAA3FF1E26087AD9007D82FF /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		FAEBEF6926026C9000AC6186 /* AppNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppNetworking; sourceTree = "<group>"; };
 		FAF87A9425EF69D4001E4C29 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,7 @@
 		FAA0B5992607A0200041DF61 /* 3_Catalopg */ = {
 			isa = PBXGroup;
 			children = (
+				FAA3FF1E26087AD9007D82FF /* ActivityIndicatorView.swift */,
 				FAA0B59A2607A0430041DF61 /* CatalogScreen.swift */,
 				FAA0B5A32607CC470041DF61 /* TwoColumnScreen.swift */,
 			);
@@ -122,6 +127,7 @@
 		FAA1200A25EBA86600E05639 /* HW1SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FAA3FF1A26087845007D82FF /* Extension */,
 				FAA0B59426079EAA0041DF61 /* 1_Dashboard */,
 				FAA0B59526079EBD0041DF61 /* 2_Food */,
 				FAA0B5992607A0200041DF61 /* 3_Catalopg */,
@@ -142,6 +148,14 @@
 				FAA1201225EBA86A00E05639 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAA3FF1A26087845007D82FF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3FF1B26087874007D82FF /* AnyTransition.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FAEBEF6B26026E2C00AC6186 /* Frameworks */ = {
@@ -239,9 +253,11 @@
 				FAF87A9525EF69D4001E4C29 /* Router.swift in Sources */,
 				FAA1203125EBD8A000E05639 /* FoodModel.swift in Sources */,
 				FAA1202125EBCFCC00E05639 /* AboutScreen.swift in Sources */,
+				FAA3FF1F26087AD9007D82FF /* ActivityIndicatorView.swift in Sources */,
 				FAA1202625EBD48900E05639 /* FoodScreen.swift in Sources */,
 				FAA1202A25EBD60C00E05639 /* FoodScreenViewModel.swift in Sources */,
 				FAA1200E25EBA86600E05639 /* ContentView.swift in Sources */,
+				FAA3FF1C26087874007D82FF /* AnyTransition.swift in Sources */,
 				FAA1201D25EBCF6200E05639 /* DashboardScreen.swift in Sources */,
 				FAA1200C25EBA86600E05639 /* HW1SwiftUIApp.swift in Sources */,
 				FAA0B5A42607CC480041DF61 /* TwoColumnScreen.swift in Sources */,

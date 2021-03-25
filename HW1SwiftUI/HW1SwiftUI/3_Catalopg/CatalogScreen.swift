@@ -10,7 +10,8 @@ import UIComponents
 
 struct CatalogScreen: View {
     var body: some View {
-        NavControllerView() {
+        // Navigation root
+        NavControllerView(transition: .custom(.moveAndFade)) {
             CatalogScreenContent()
         }
     }
@@ -31,7 +32,7 @@ struct CatalogScreenContent: View {
                                 .background(Color.green)
                                 .foregroundColor(.gray)
                         }
-                        
+                        ActivityIndicatorView()
                         CustomButton {
                             print("Custom Button")
                         } content: {

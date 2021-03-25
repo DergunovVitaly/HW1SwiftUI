@@ -79,10 +79,10 @@ struct TwoColumnScreen: View {
 struct Screen10: View {
     
     var body: some View {
-        NavPopButton() {
+        NavPopButton(label:  {
             Text("<-- To Root")
                 .font(.largeTitle)
-        }
+        }, destination: .root)
     }
     
 }

@@ -37,10 +37,15 @@ private struct ScreenStack {
     }
 }
 
-// MARK: - View Models
+// MARK: - View Model
 public enum PopDestination {
     case previous
     case root
+}
+
+public enum NavTransition {
+    case none
+    case custom(AnyTransition)
 }
 
 enum NavType {
@@ -57,14 +62,33 @@ public final class NavControllerViewModel: ObservableObject {
             currentScreen = screenStack.top()
         }
     }
+    // Animations
     
-    func push<S: View>(_ screenView: S) {
-        let screen: Screen = .init(id: UUID().uuidString, nextScreen: AnyView(screenView))
-        screenStack.push(screen)
+    var navigationType: NavType = .push
+    private let easing: Animation
+    
+    init(easing: Animation) {
+        self.easing = easing
     }
     
-    func pop(to: PopDestination) {
-        screenStack.popToPrevious()
+    func push<S: View>(_ screenView: S) {
+        withAnimation(easing) {
+            navigationType = .push
+            let screen: Screen = .init(id: UUID().uuidString, nextScreen: AnyView(screenView))
+            screenStack.push(screen)
+        }
+    }
+    
+    func pop(to: PopDestination = .previous) {
+        withAnimation(easing) {
+            navigationType = .pop
+            switch to {
+            case .previous:
+                screenStack.popToPrevious()
+            case .root:
+                screenStack.popToRoot()
+            }
+        }
     }
 }
 
@@ -75,10 +99,18 @@ public struct NavControllerView<Content>: View where Content: View {
     @ObservedObject var viewModel: NavControllerViewModel
     
     private let content: Content
+    private let transitions: (push: AnyTransition, pop: AnyTransition)
     
-    public init(@ViewBuilder content: @escaping () -> Content) {
-        viewModel = NavControllerViewModel()
+    public init(transition: NavTransition, easing: Animation = .easeOut(duration: 0.33),@ViewBuilder content: @escaping () -> Content) {
+        viewModel = NavControllerViewModel(easing: easing)
         self.content = content()
+        
+        switch transition {
+        case .custom(let transition):
+            transitions = (transition, transition)
+        case .none:
+            transitions = (.identity, .identity)
+        }
     }
     
     public var body: some View {
@@ -86,9 +118,12 @@ public struct NavControllerView<Content>: View where Content: View {
         ZStack {
             if isRoot {
                 content
-                    .environmentObject(viewModel)
+                    .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
+                .environmentObject(viewModel)
             } else {
-                viewModel.currentScreen!.nextScreen.environmentObject(viewModel)
+                viewModel.currentScreen!.nextScreen
+                    .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
+                .environmentObject(viewModel)
             }
         }
     }
@@ -114,14 +149,16 @@ public struct NavPushButton<Label, Destination>: View where Label: View, Destina
 public struct NavPopButton<Label>: View where Label: View {
     @EnvironmentObject var viewModel: NavControllerViewModel
     private let label: () -> Label
+    private let destination: PopDestination
     
-    public init(@ViewBuilder label: @escaping () -> Label) {
+    public init(@ViewBuilder label: @escaping () -> Label, destination: PopDestination = .previous) {
         self.label = label
+        self.destination = destination
     }
     
     public var body: some View {
         label().onTapGesture {
-            viewModel.pop(to: <#PopDestination#>)
+            viewModel.pop(to: destination)
         }
     }
 }

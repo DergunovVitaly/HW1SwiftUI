@@ -9,6 +9,6 @@ import Foundation
 import SwiftUI
 
 final class Router: ObservableObject {
-    @Published var selection = 0
+    @Published var selection = 2
     @Published var isOpenedFastFoodScreen: Bool = false
 }
